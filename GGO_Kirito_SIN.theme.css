@@ -1,7 +1,7 @@
 /**
  * @name GGO Kirito
  * @author VaporousCreeper
- * @version 1.4.1-vencord.1
+ * @version 1.4.1-vencord.2
  * @description A theme with Kirito and Deathgun fighting in GGO (Gun Gale Online)
  * @source https://github.com/VaporousCreeper/BetterDiscord-ThemesAndPlugins/tree/master/Themes/GGO_Kirito
  */
@@ -1229,3 +1229,99 @@ Background Img: https://wpblink.com/sites/default/files/wallpaper/anime/66761/sw
 
 The items above are not owned by me, They go to there respected owners 
 */
+
+/* Vencord background compatibility.
+   Match Discord's CSS module names without depending on rotating hash suffixes.
+   Keep the wallpaper on app-mount and clear the full-window surfaces above it. */
+#app-mount {
+    background-image: var(--background) !important;
+    background-color: #100b0e !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+#app-mount,
+#app-mount :is(.theme-dark, .theme-darker, .theme-midnight) {
+    --background-primary: transparent;
+    --background-secondary: rgba(0, 0, 0, 0.18);
+    --background-secondary-alt: rgba(0, 0, 0, 0.25);
+    --background-tertiary: transparent;
+    --background-base-lowest: transparent;
+    --background-base-lower: rgba(0, 0, 0, 0.18);
+    --background-base-low: rgba(0, 0, 0, 0.25);
+    --background-surface-high: rgba(20, 15, 18, 0.92);
+    --background-surface-higher: rgba(25, 18, 22, 0.96);
+    --background-surface-highest: #21191d;
+}
+
+#app-mount [class^="bg_"],
+#app-mount [class*=" bg_"],
+#app-mount [class^="app_"],
+#app-mount [class*=" app_"],
+#app-mount [class^="appMount_"],
+#app-mount [class*=" appMount_"],
+#app-mount [class^="layers_"],
+#app-mount [class*=" layers_"],
+#app-mount [class^="base_"],
+#app-mount [class*=" base_"],
+#app-mount [class^="content_"],
+#app-mount [class*=" content_"],
+#app-mount [class^="page_"],
+#app-mount [class*=" page_"],
+#app-mount [class^="chat_"],
+#app-mount [class*=" chat_"],
+#app-mount [class^="chatContent_"],
+#app-mount [class*=" chatContent_"],
+#app-mount [class^="chatContentWrapper_"],
+#app-mount [class*=" chatContentWrapper_"],
+#app-mount [class^="channelChatWrapper_"],
+#app-mount [class*=" channelChatWrapper_"],
+#app-mount [class^="chatLayerWrapper_"],
+#app-mount [class*=" chatLayerWrapper_"],
+#app-mount [class^="sidebar_"],
+#app-mount [class*=" sidebar_"],
+#app-mount [class^="sidebarList_"],
+#app-mount [class*=" sidebarList_"],
+#app-mount [class^="sidebarListRounded_"],
+#app-mount [class*=" sidebarListRounded_"],
+#app-mount [class^="privateChannels_"],
+#app-mount [class*=" privateChannels_"],
+#app-mount [class^="guilds_"],
+#app-mount [class*=" guilds_"],
+#app-mount [class^="membersWrap_"],
+#app-mount [class*=" membersWrap_"],
+#app-mount [class^="members_"],
+#app-mount [class*=" members_"],
+#app-mount [class^="member_"],
+#app-mount [class*=" member_"],
+#app-mount [class^="standardSidebarView_"],
+#app-mount [class*=" standardSidebarView_"],
+#app-mount [class^="contentRegion_"],
+#app-mount [class*=" contentRegion_"],
+#app-mount [class^="contentRegionScroller_"],
+#app-mount [class*=" contentRegionScroller_"],
+#app-mount [class^="sidebarRegionScroller_"],
+#app-mount [class*=" sidebarRegionScroller_"],
+#app-mount [class^="peopleColumn_"],
+#app-mount [class*=" peopleColumn_"],
+#app-mount [class^="nowPlayingColumn_"],
+#app-mount [class*=" nowPlayingColumn_"],
+#app-mount [class^="tabBody_"],
+#app-mount [class*=" tabBody_"],
+#app-mount [class^="applicationStore_"],
+#app-mount [class*=" applicationStore_"],
+#app-mount [class^="homeWrapper_"],
+#app-mount [class*=" homeWrapper_"],
+#app-mount [class^="homeWrapperNormal_"],
+#app-mount [class*=" homeWrapperNormal_"],
+#app-mount [class^="mainPageScroller_"],
+#app-mount [class*=" mainPageScroller_"] {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* A single dark overlay keeps text readable without hiding the wallpaper. */
+#app-mount [class^="bg_"],
+#app-mount [class*=" bg_"] {
+    background-color: rgba(0, 0, 0, 0.28) !important;
+}
