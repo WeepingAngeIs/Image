@@ -1,7 +1,7 @@
 /**
  * @name GGO Kirito
  * @author VaporousCreeper
- * @version 1.4.1-vencord.2
+ * @version 1.4.1-vencord.3
  * @description A theme with Kirito and Deathgun fighting in GGO (Gun Gale Online)
  * @source https://github.com/VaporousCreeper/BetterDiscord-ThemesAndPlugins/tree/master/Themes/GGO_Kirito
  */
@@ -1324,4 +1324,46 @@ The items above are not owned by me, They go to there respected owners
 #app-mount [class^="bg_"],
 #app-mount [class*=" bg_"] {
     background-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Near-black left navigation: server rail, DMs/channels, and voice controls. */
+#app-mount [class^="guilds_"],
+#app-mount [class*=" guilds_"],
+#app-mount [class^="sidebar_"],
+#app-mount [class*=" sidebar_"],
+#app-mount [class^="sidebarList_"],
+#app-mount [class*=" sidebarList_"],
+#app-mount [class^="sidebarListRounded_"],
+#app-mount [class*=" sidebarListRounded_"],
+#app-mount [class^="privateChannels_"],
+#app-mount [class*=" privateChannels_"],
+#app-mount [class^="sidebarRegionScroller_"],
+#app-mount [class*=" sidebarRegionScroller_"] {
+    --background-primary: #050505;
+    --background-secondary: #050505;
+    --background-secondary-alt: #080808;
+    --background-tertiary: #030303;
+    --background-base-lowest: #030303;
+    --background-base-lower: #050505;
+    --background-base-low: #080808;
+    --background-modifier-hover: #131313;
+    --background-modifier-selected: #1c1c1c;
+    --background-mod-subtle: #101010;
+    --background-mod-normal: #151515;
+    background: #050505 !important;
+}
+#app-mount :is([class^="sidebar_"], [class*=" sidebar_"]) :is([class^="scroller_"], [class*=" scroller_"], [class^="searchBar_"], [class*=" searchBar_"]),
+#app-mount :is([class^="privateChannels_"], [class*=" privateChannels_"]) :is([class^="scroller_"], [class*=" scroller_"]) {
+    background: #050505 !important;
+}
+#app-mount :is([class^="panels_"], [class*=" panels_"]),
+#app-mount :is([class^="panels_"], [class*=" panels_"]) :is([class^="container_"], [class*=" container_"], [class^="activityPanel_"], [class*=" activityPanel_"], [class^="wrapper_"], [class*=" wrapper_"]) {
+    background: #090909 !important;
+}
+#app-mount :is([class^="sidebar_"], [class*=" sidebar_"]) :is([class^="searchBarComponent_"], [class*=" searchBarComponent_"]),
+#app-mount :is([class^="sidebar_"], [class*=" sidebar_"]) :is([class^="interactive_"], [class*=" interactive_"], [class^="channel_"], [class*=" channel_"])[aria-selected="true"] {
+    background-color: #1c1c1c !important;
+}
+#app-mount :is([class^="guilds_"], [class*=" guilds_"]) :is([class^="scroller_"], [class*=" scroller_"]) {
+    background: #030303 !important;
 }
